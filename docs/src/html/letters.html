@@ -23,47 +23,80 @@
     </div>
 
     <div class="card full-width-card">
-        <img src="/docs/src/images/primeiro.png" alt="A horizontal memory">
-        <div class="caption">A memory that stretched across time 💫</div>
+      <img src="/docs/src/images/primeiro.png" alt="A horizontal memory">
+      <div class="caption">A memory that stretched across time 💫</div>
     </div>
 
-
+    <!-- Spotify Card -->
     <div class="card spotify-card">
-        <iframe style="border-radius:12px" 
-            src="https://open.spotify.com/embed/track/1DLKuppSYytOuxhtI6KBGu?utm_source=generator&theme=0" 
-            width="100%" 
-            height="352" 
-            frameBorder="0" 
-            allowfullscreen="" 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-            loading="lazy">
-        </iframe>
+      <iframe style="border-radius:12px" 
+          src="https://open.spotify.com/embed/track/1DLKuppSYytOuxhtI6KBGu?utm_source=generator&theme=0" 
+          width="100%" 
+          height="352" 
+          frameBorder="0" 
+          allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+      </iframe>
     </div>
 
-
-    <div class="card text-card" onclick="expandText(this)">
-  <div class="caption">
-    Ó minha musa, venho aqui expressar os meus sentimentos.<br>
-    Ocasionalmente me pego distraído em todos os momentos.<br>
-    Ao lhe ver meus sentimentos florescem.<br>
-    E por um minuto de todos os meus problemas esquecem.<br><br>
-
-    Eu pensei que esses sentimentos já estivessem extintos.<br>
-    Mas eu lhe vi e descobri que sentimentos podem ressuscitar.<br>
-    Sempre tive meus erros, mas lutei pra melhorar.<br>
-    E como uma força do divino, você veio me tirar do labirinto.<br><br>
-
-    Estive em uma época sem rumo e perdido.<br>
-    Porém, coisa mais irônica que o destino não há.<br>
-    Pois me encontro no seu sorriso e descanso em seu olhar.<br><br>
-
-    Tu és tão magnífica que me fez proclamar ao coração.<br>
-    Ah coração, esquece esse medo de amar.<br>
-    Pois percebi que com você estou disposto a me entregar.<br>
+    <!-- Sentimento Card -->
+    <div id="sentimentoToggle">
+      <button class="btn-toggle">Mostrar Sentimento</button>
+    </div>
   </div>
-</div>
 
-  </div>
-  <script src="docs/src/js/letters.js" defer></script>
+  <script>
+    const toggleButton = document.querySelector('#sentimentoToggle .btn-toggle');
+    const sentimentoCard = document.getElementById('sentimentoToggle');
+
+    toggleButton.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mostrarTexto();
+    });
+
+    function mostrarTexto() {
+      sentimentoCard.classList.add("expandido");
+      sentimentoCard.innerHTML = `
+        <div class="texto-expandido">
+          Ó minha musa, venho aqui expressar os meus sentimentos.
+          Ocasionalmente me pego distraído em todos os momentos.
+          Ao lhe ver meus sentimentos florescem.
+          E por um minuto de todos os meus problemas esquecem.
+
+          Eu pensei que esses sentimentos já estivessem extintos.
+          Mas eu lhe vi e descobri que sentimentos podem ressuscitar.
+          Sempre tive meus erros, mas lutei pra melhorar.
+          E como uma força do divino, você veio me tirar do labirinto.
+
+          Estive em uma época sem rumo e perdido.
+          Porém, coisa mais irônica que o destino não há.
+          Pois me encontro no seu sorriso e descanso em seu olhar.
+
+          Tu és tão magnífica que me fez proclamar ao coração.
+          Ah coração, esquece esse medo de amar.
+          Pois percebi que com você estou disposto a me entregar.
+        </div>
+        <button class="btn-toggle" style="position:absolute; bottom:20px; left:0; right:0; margin:auto">Fechar</button>
+      `;
+
+      document.querySelector('#sentimentoToggle .btn-toggle').addEventListener('click', function(e) {
+        e.stopPropagation();
+        mostrarBotao();
+      });
+    }
+
+    function mostrarBotao() {
+      sentimentoCard.classList.remove("expandido");
+      sentimentoCard.innerHTML = `
+        <button class="btn-toggle">Mostrar Sentimento</button>
+      `;
+      
+      document.querySelector('#sentimentoToggle .btn-toggle').addEventListener('click', function(e) {
+        e.stopPropagation();
+        mostrarTexto();
+      });
+    }
+  </script>
 </body>
 </html>

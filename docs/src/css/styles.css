@@ -24,6 +24,8 @@ body {
     font-family: 'Arial', sans-serif;
     touch-action: manipulation;
     overflow-x: hidden;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;     /* Centraliza horizontalmente */
 }
 
 .container {
@@ -45,6 +47,8 @@ body {
     max-width: 500px;
     margin: 0 auto;
     padding: 8px;
+    margin-top: 5%;
+    margin-bottom: auto;
 }
 
 .image {
