@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#DDEEFF">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Nosso Mural 💖</title>
-    <link rel="stylesheet" href="/docs/src/css/letters.css" />
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="docs/src/icons/heart.png" sizes="192x192">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#DDEEFF">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Nosso Mural 💖</title>
+  <link rel="stylesheet" href="/docs/src/css/letters.css" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="docs/src/icons/heart.png" sizes="192x192">
 </head>
 <body>
   <div class="quote">
@@ -45,12 +45,91 @@
         </iframe>
       </div>
       <div class="photo-card">
-        <img src="/docs/src/images/desenho.jpeg" alt="Uma foto significativa que carrega um valor sentimental.">
+        <img src="/docs/src/images/dese.jpeg" alt="Uma foto significativa que carrega um valor sentimental.">
       </div>
     </div>
 
-    <!-- Card do Poema (clicável inteiro) -->
-    <div id="poema-container" class="card full-width-card text-card" onclick="togglePoema()">
+    <!-- Card do Poema (independente) -->
+    <div class="card full-width-card text-card" onclick="togglePoema(this)">
+      <div class="caption initial-caption">Palavras Que Guardei Pra Você</div>
+      <div class="poema-content" style="display: none;">
+        <div class="caption poema-text">
+          Hoje faz um mês desde tudo o que aconteceu.<br>
+          O tempo passou rápido, mas ao mesmo tempo cada dia sem você pareceu durar uma eternidade.<br>
+          É curioso como o destino age, como ele nos surpreende com lições que, no início, doem... mas depois fazem sentido.<br><br>
+
+          Eu nunca imaginei que, para te amar do jeito certo, eu teria que primeiro aprender a te perder.<br>
+          Que paradoxo cruel, né?<br>
+          Mas como uma menina linda me disse uma vez: "há males que vêm para o bem".<br>
+          Essa frase tem me acompanhado todos os dias, e quanto mais eu penso nela, mais entendo o quanto é verdadeira, por mais dura que seja.<br><br>
+
+          Você também me disse: "errar é humano".<br>
+          E eu concordo.<br>
+          Mas confesso que, na vontade imensa de te proteger, de te ter perto e de cuidar de você com tudo o que eu tinha, acabei ultrapassando os limites.<br>
+          Exagerei. Fui bobo. E no fim, te esgotei.<br>
+          Isso me dói mais do que qualquer outra coisa, porque meu único desejo sempre foi te fazer feliz.<br><br>
+
+          Desde então, todos os dias, eu peço a São José que me ensine a te amar como ele amou Nossa Senhora: com paciência, com respeito, com fé e com ternura.<br>
+          Que ele me mostre como ser forte, presente, equilibrado... mesmo que de longe.<br><br>
+
+          Se você está lendo isso agora, é porque eu tive coragem de transformar todo esse sentimento em algo concreto.<br>
+          Eu fiz esse site pra você. Não por obrigação ou drama, mas porque o que sinto é real e não cabe mais só dentro de mim.<br><br>
+
+          Quero que saiba que, mesmo em silêncio, eu oro.<br>
+          Peço a Deus, de verdade, que me transforme na minha melhor versão.<br>
+          Não só por mim, mas principalmente por você.<br>
+          Quero ser alguém que te traz paz, não peso. Que soma, que ilumina e que respeita o teu tempo, teus sentimentos e teu espaço.<br><br>
+
+          Outro dia, assistindo a um vídeo do padre Leonardo, ouvi algo que me tocou profundamente:<br>
+          ele disse que o amor não é um sentimento, é uma escolha.<br>
+          E eu entendi.<br>
+          Eu escolho te amar. Todos os dias.<br>
+          Mesmo que a gente esteja longe, mesmo que as circunstâncias não estejam a nosso favor, mesmo que o “nós” pareça distante agora.<br><br>
+
+          Porque amar você foi, e continua sendo, a decisão mais bonita que o meu coração já tomou.
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="grid">
+    <!-- Cards de imagem -->
+    <div class="card">
+      <img src="/docs/src/images/miranha.jpeg" alt="Close-up de uma flor vibrante, simbolizando beleza e sentimentos delicados.">
+      <div class="caption">A gente é estranho pros outros, mas perfeito um pro outro.</div>
+    </div>
+
+    <div class="card">
+      <img src="/docs/src/images/pedido.jpeg" alt="Uma carta de amor aberta com caligrafia romântica.">
+      <div class="caption">Ali foi mais que um gesto. Foi um 'eu te sinto', mesmo sem dizer.</div>
+    </div>
+
+    <div class="card full-width-card">
+      <img src="/docs/src/images/funko.png" alt="Uma paisagem ampla e serena, evocando memórias duradouras.">
+      <div class="caption">Mesmo que o tempo mude as formas, tem sentimentos que continuam sendo edição limitada. O que vivemos não cabe numa caixa, mas ainda cabe direitinho no coração. 💫</div>
+    </div>
+
+    <!-- Seção de Música com Foto -->
+    <div class="music-section">
+      <div class="card spotify-card">
+        <iframe 
+          style="border-radius:12px" 
+          src="https://open.spotify.com/embed/track/0xaKeBp5xP2o0fsPr9iDDH?utm_source=generator&theme=0" 
+          width="100%" height="352" frameBorder="0" allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="photo-card">
+        <img src="/docs/src/images/mai.jpeg" alt="Uma foto significativa que carrega um valor sentimental.">
+      </div>
+    </div>
+
+    <!-- Segundo Card do Poema (independente) -->
+    <div class="card full-width-card text-card" onclick="togglePoema(this)">
       <div class="caption initial-caption">Mostrar Sentimento</div>
       <div class="poema-content" style="display: none;">
         <div class="caption poema-text">
@@ -76,32 +155,23 @@
     </div>
   </div>
 
+  <!-- JavaScript -->
   <script>
-    // Função para alternar a exibição do poema ao clicar no card
-    function togglePoema() {
-      // Obtém o elemento do container do poema pelo seu ID
-      const container = document.getElementById("poema-container");
-      // Encontra a legenda inicial dentro do container (ex: "Mostrar Sentimento")
-      const initialCaption = container.querySelector(".initial-caption");
-      // Encontra o container que guarda o conteúdo completo do poema
-      const poemaContent = container.querySelector(".poema-content");
+    // Torna cada card de poema independente
+    function togglePoema(cardElement) {
+      const initialCaption = cardElement.querySelector(".initial-caption");
+      const poemaContent = cardElement.querySelector(".poema-content");
 
-      // Verifica se o conteúdo do poema está atualmente escondido (display: none)
+
+
       if (poemaContent.style.display === "none") {
-        // Se estiver escondido, mostra o conteúdo do poema
         poemaContent.style.display = "block";
-        // Esconde a legenda inicial ("Mostrar Sentimento")
         initialCaption.style.display = "none";
-        // Adiciona uma classe ao container para permitir estilização diferente
-        // quando o poema está aberto (por exemplo, mudar a cor de fundo)
-        container.classList.add("poema-aberto");
+        cardElement.classList.add("poema-aberto");
       } else {
-        // Se estiver visível, esconde o conteúdo do poema
         poemaContent.style.display = "none";
-        // Mostra novamente a legenda inicial
         initialCaption.style.display = "block";
-        // Remove a classe de estilização do container
-        container.classList.remove("poema-aberto");
+        cardElement.classList.remove("poema-aberto");
       }
     }
   </script>
