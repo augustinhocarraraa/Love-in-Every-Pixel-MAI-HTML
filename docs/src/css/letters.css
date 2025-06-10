@@ -1,407 +1,204 @@
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #DDEEFF;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #DDEEFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
 
-.quote {
-  background-color: #FFDAB9;
-  padding: 20px 30px;
-  border-radius: 25px;
-  font-size: 24px;
-  color: #2F4F4F;
-  text-align: center;
-  max-width: 700px;
-  margin-bottom: 30px;
-  font-style: italic;
-}
+    .quote {
+      background-color: #FFDAB9;
+      padding: 20px 30px;
+      border-radius: 25px;
+      font-size: 24px;
+      color: #2F4F4F;
+      text-align: center;
+      max-width: 700px;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 800px;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 800px;
+    }
 
-.card {
-  background-color: #FFC1CC;
-  border-radius: 20px;
-  overflow: hidden;
-  text-align: center;
-  padding: 10px;
-}
+    .card {
+      background-color: #FFC1CC;
+      border-radius: 20px;
+      overflow: hidden;
+      text-align: center;
+      padding: 10px;
+    }
 
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px 20px 0 0;
-}
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px 20px 0 0;
+    }
 
-.caption {
-  padding: 10px;
-  font-size: 18px;
-  color: #2F4F4F;
-}
+    .caption {
+      padding: 10px;
+      font-size: 18px;
+      color: #2F4F4F;
+    }
 
-.full-width-card {
-  grid-column: span 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #1F1F1F;
-  border-radius: 16px;
-  overflow: hidden;
-  padding-bottom: 1rem;
-}
+    .music {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+    }
 
-.full-width-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-bottom: 1px solid #1F1F1F;
-}
+    .music img {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+    }
 
-.full-width-card .caption {
-  margin-top: 0.5rem;
-  color: #DDEEFF;
-  font-weight: 500;
-}
+    .track {
+      text-align: left;
+      font-size: 16px;
+      color: #2F4F4F;
+    }
 
+    .btn {
+      margin-top: 10px;
+      background-color: #FF7F50;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
 
-.music-section {
-  grid-column: span 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
+    .spotify-card {
+      background-color: #1F1F1F;
+      padding: 0;
+    }
 
-.photo-card {
-  background-color: #FFFFFF;
-  border-radius: 20px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 352px;
-}
+    .full-width-card {
+      grid-column: span 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #1F1F1F;
+      border-radius: 16px;
+      overflow: hidden;
+      padding-bottom: 1rem;
+    }
 
-.photo-card img {
-  max-height: 100%;
-  width: auto;
-  max-width: 100%;
-  border-radius: 20px;
-  object-fit: contain;
-}
+    .full-width-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid #1F1F1F;
+    }
 
-/* Botão de poema estilizado */
-.btn-poema {
-  background-color: #FFC1CC;
-  color: #2F4F4F;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 10px 0;
-}
+    .full-width-card .caption {
+      margin-top: 0.5rem;
+      color: #DDEEFF; /* Este é o caption dos cards de imagem (claro) */
+      font-weight: 500;
+    }
 
-.btn-poema:hover {
-  background-color: #f8a9b6;
-}
+    .music-section {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
 
-/* Card para texto do poema */
-.text-toggle-card {
-  background-color: #FFC1CC;
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-}
+    .photo-card {
+      background-color: #FFFFFF;
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 352px;
+    }
 
-/* Texto do poema escondido por padrão */
-.poema-texto {
-  display: none;
-  margin-top: 16px;
-  transition: opacity 0.3s ease;
-}
+    .photo-card img {
+      max-height: 100%;
+      width: auto;
+      max-width: 100%;
+      border-radius: 20px;
+      object-fit: contain;
+    }
 
-.poema-texto .caption {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #2F4F4F;
-  padding: 10px;
-  white-space: pre-line;}
+    /* Botão de poema estilizado */
+    .btn-poema {
+      background-color: #FFC1CC;
+      color: #2F4F4F;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 10px 0;
+    }
 
-.spotify-card {
-  background-color: #1F1F1F;
-  padding: 0;
-  height: 100%;
-}
+    .btn-poema:hover {
+      background-color: #f8a9b6;
+    }
 
-#sentimentoToggle {
-  background-color: #FFD1DC;
-  border: none;
-  padding: 20px;
-  border-radius: 16px;
-  width: 100%;
-  box-shadow: 0 2px 8px rgba(90, 42, 56, 0.2);
-  font-family: Arial, sans-serif;
-  color: #5A2A38;
-  text-align: center;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 352px; /* Match Spotify iframe height */
-}
+    /* Card para texto do poema */
+    .text-toggle-card {
+      background-color: #FFC1CC;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+    }
 
-.btn-toggle {
-  background-color: #FF6B8B;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  width: 100%;
-  max-width: 200px;
-  transition: transform 0.1s, opacity 0.2s;
-}
+    /* Texto do poema escondido por padrão */
+    .poema-texto {
+      display: none;
+      margin-top: 16px;
+      transition: opacity 0.3s ease;
+    }
 
-.btn-toggle:active {
-  transform: scale(0.96);
-  opacity: 0.9;
-}
+    .poema-texto .caption {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #2F4F4F;
+      padding: 10px;
+      white-space: pre-line;
+    }
 
-#sentimentoToggle div {
-  width: 100%;
-  padding: 20px;
-  cursor: pointer;
-  white-space: pre-line;
-  color: #5A2A38;
-}
+    /* Estilos adicionados para o comportamento do poema (conforme sua solicitação anterior) */
+    .text-card {
+      cursor: pointer;
+      background-color: #FFC1CC;
+      color: #2F4F4F;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-/* Mantenha todos os outros estilos... */
+    .poema-aberto {
+      background-color: #1F1F1F !important;
+      color: #DDEEFF !important;
+    }
 
-#sentimentoToggle {
-  background-color: #FFD1DC;
-  border: none;
-  padding: 20px;
-  border-radius: 16px;
-  width: 100%;
-  box-shadow: 0 2px 8px rgba(90, 42, 56, 0.2);
-  font-family: Arial, sans-serif;
-  color: #5A2A38;
-  text-align: center;
-  height: 352px; /* Altura fixa igual ao iframe do Spotify */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    .poema-aberto .caption,
+    .poema-aberto .poema-text {
+      color: #DDEEFF !important; /* Este é o texto do poema quando aberto (claro) */
+    }
 
-.btn-toggle {
-  background-color: #FF6B8B;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  width: 100%;
-  max-width: 200px;
-  transition: transform 0.1s, opacity 0.2s;
-  margin: auto; /* Centraliza verticalmente */
-}
+    .poema-text {
+      padding: 15px;
+      line-height: 1.6;
+      text-align: center;
+    }
 
-/* Quando o texto estiver visível */
-#sentimentoToggle div {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  cursor: pointer;
-  white-space: pre-line;
-  color: #5A2A38;
-  overflow-y: auto; /* Adiciona scroll se necessário */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#sentimentoToggle {
-  background-color: #FFD1DC;
-  border: none;
-  border-radius: 16px;
-  width: 100%;
-  box-shadow: 0 2px 8px rgba(90, 42, 56, 0.2);
-  font-family: Arial, sans-serif;
-  color: #5A2A38;
-  text-align: center;
-  height: 352px; /* Mesma altura do Spotify */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative; /* Para o posicionamento do texto */
-  overflow: hidden; /* Esconde o que ultrapassar */
-}
-
-/* Container do texto quando expandido */
-#sentimentoToggle .texto-expandido {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 25px;
-  overflow-y: auto; /* Adiciona scroll se necessário */
-  white-space: pre-line;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* Botão - versão centralizada */
-.btn-toggle {
-  background-color: #FF6B8B;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  width: auto;
-  max-width: 200px;
-  margin: 0 auto;
-  transition: all 0.3s ease;
-  z-index: 1;
-}
-
-
-/* Container principal do grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 800px;
-  align-items: start; /* Alinha os itens pelo topo */
-}
-
-/* Card de sentimentos - estado normal */
-#sentimentoToggle {
-  background-color: #FFD1DC;
-  border-radius: 16px;
-  width: 100%;
-  box-shadow: 0 2px 8px rgba(90, 42, 56, 0.2);
-  font-family: Arial, sans-serif;
-  color: #5A2A38;
-  text-align: center;
-  min-height: 352px; /* Altura mínima igual ao Spotify */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  transition: all 0.3s ease;
-  grid-row: span 1; /* Ocupa 1 linha por padrão */
-}
-
-/* Card de sentimentos - estado expandido */
-#sentimentoToggle.expandido {
-  grid-row: span 2; /* Ocupa 2 linhas quando expandido */
-  min-height: auto;
-  height: auto;
-}
-
-/* Texto expandido */
-#sentimentoToggle .texto-expandido {
-  padding: 30px;
-  white-space: pre-line;
-  text-align: center;
-  overflow-y: auto;
-  height: 100%;
-}
-
-/* Botão - versão responsiva */
-.btn-toggle {
-  background-color: #FF6B8B;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  width: auto;
-  max-width: 200px;
-  margin: 0 auto;
-  transition: all 0.3s ease;
-}
-
-
-/* ... (mantenha todos os outros estilos) ... */
-
-/* Container do grid - importante para o layout */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 800px;
-  align-items: start; /* Alinha os itens pelo topo */
-}
-
-/* Card de sentimentos - estado normal */
-#sentimentoToggle {
-  background-color: #FFD1DC;
-  border-radius: 16px;
-  width: 100%;
-  box-shadow: 0 2px 8px rgba(90, 42, 56, 0.2);
-  font-family: Arial, sans-serif;
-  color: #5A2A38;
-  text-align: center;
-  min-height: 352px; /* Altura mínima igual ao Spotify */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  transition: min-height 0.3s ease;
-}
-
-/* Card de sentimentos - estado expandido */
-#sentimentoToggle.expandido {
-  min-height: 500px; /* Altura aumentada */
-  align-items: flex-start; /* Alinha o texto no topo */
-}
-
-/* Texto expandido */
-#sentimentoToggle .texto-expandido {
-  padding: 30px;
-  white-space: pre-line;
-  text-align: center;
-  overflow-y: auto;
-  max-height: 440px; /* 500px - padding */
-  width: 100%;
-}
-
-/* Botão */
-.btn-toggle {
-  background-color: #FF6B8B;
-  color: white;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  max-width: 200px;
-  transition: all 0.3s ease;
-  margin: 0 auto;
-}
+    /* Regra para escurecer o texto "Mostrar Sentimento" quando o poema está fechado */
+    .text-card .initial-caption {
+      color: #2F4F4F; /* Isso garante que "Mostrar Sentimento" seja escuro */
+    }
