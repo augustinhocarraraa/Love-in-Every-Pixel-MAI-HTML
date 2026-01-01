@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
 <head>
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+  // USE AS MESMAS INFORMAÇÕES DO PASSO 1 AQUI TAMBÉM
+  const firebaseConfig = {
+    apiKey: "SUA_API_KEY",
+    authDomain: "SEU_PROJETO.firebaseapp.com",
+    projectId: "SEU_PROJETO",
+    appId: "APP_ID"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // O "vigia" fica olhando: se o usuário não estiver logado, joga ele de volta pro login
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      window.location.href = "login.html";
+    }
+  });
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#DDEEFF">
@@ -11,6 +33,7 @@
     <link rel="stylesheet" href="/docs/src/css/styles.css">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="docs/src/icons/heart.png" sizes="192x192">
+    
 </head>
 <body>
     <br><br><br><br><br><br>
